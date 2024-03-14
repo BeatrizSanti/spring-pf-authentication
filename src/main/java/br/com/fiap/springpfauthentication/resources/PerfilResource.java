@@ -25,7 +25,8 @@ public class PerfilResource {
     public List<Perfil> findAll() {
         return repo.findAll();
     }
-
+    
+//Criando Rotas 
     @GetMapping(value="/{id}/permissoes")
     public Perfil findById(@PathVariable Long id) {
 
