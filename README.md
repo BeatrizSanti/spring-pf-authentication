@@ -2,7 +2,7 @@
 
 |![fiap.jpg](documentacao%2Ffiap.jpg)                | **JAVA ADVANCED** |
 |------------------------------------------|-------------------|
-| **ALUNO:**                               | **TURMA:** 2TDSPF |
+| **ALUNO:** Beatriz Santi, Mirelly Azevedo          | **TURMA:** 2TDSPF |
 | **PROFESSOR:** Benefrancis do Nascimento | 11/03/2024        |
 | **SIMULADO PARA O CP I**                 |                   |
 
