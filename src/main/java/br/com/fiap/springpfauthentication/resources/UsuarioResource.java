@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value="/usuario")
 public class UsuarioResource {
 
+    // conectando PermissaoRepository a repo
     @Autowired
     private UsuarioRepository repo;
 
-
+    //Criando Rotas 
     @GetMapping
     public List<Usuario> findAll() {
         return repo.findAll();
@@ -28,6 +29,7 @@ public class UsuarioResource {
         return repo.findById( id ).orElseThrow();
     }
 
+    //Fazendo transação para o banco de dados
     @Transactional
     @PostMapping
     public Usuario save(@RequestBody Usuario usuario) {
