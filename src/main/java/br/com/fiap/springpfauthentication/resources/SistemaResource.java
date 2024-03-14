@@ -14,12 +14,14 @@ import java.util.Objects;
 @RequestMapping(value="/sistema")
 public class SistemaResource {
 
+    // conectando PermissaoRepository a repo
     @Autowired
     private SistemaRepository repo;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    //Criando Rotas 
     @GetMapping
     public List<Sistema> findAll() {
 
@@ -32,6 +34,7 @@ public class SistemaResource {
         return repo.findById( id ).orElseThrow();
     }
 
+    //Fazendo transação para o banco de dados
     @Transactional
     @PostMapping
     public Sistema save(@RequestBody Sistema sistema) {
