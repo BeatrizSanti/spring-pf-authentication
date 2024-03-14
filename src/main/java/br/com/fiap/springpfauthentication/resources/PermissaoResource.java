@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value="/permissao")
 public class PermissaoResource {
 
+    // conectando PermissaoRepository a repo
     @Autowired
     private PermissaoRepository repo;
 
@@ -19,12 +20,14 @@ public class PermissaoResource {
         return repo.findAll();
     }
 
+    //Criando Rotas 
     @GetMapping(value="/{id}")
     public Permissao findById(@PathVariable Long id) {
 
         return repo.findById( id ).orElseThrow();
     }
 
+    //Fazendo transação para o banco de dados
     @Transactional
     @PostMapping
     public Permissao save(@RequestBody Permissao permissao) {
